@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinylStore</title>
+    <link rel="stylesheet" href="css/estilos_parcial1.css">
+    <script src="java/script_parcial1.js" defer></script>
+
+    <!--Fuentes google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jockey+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Koulen&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Rowdies:wght@300;400;700&family=Sono:wght@200..800&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="imagenes/imagenes_parcial1/logo.png" alt="">
+            <nav id="menu">
+        <ul class="nav-list">    
+            <li id="sobre_nosotros"><a href="" >Sobre Nosotros</a></li>
+            <li class="categorias">
+                <a href="#">Categorías</a>
+                <ul class="menu_desplegable">
+                    <li><a href="#latina">Música Latina</a></li>
+                    <li><a href="#rock">Rock</a></li>
+                    <li><a href="#pop">Pop</a></li>
+                    <li><a href="#soundtrack">Soundtrack</a></li>
+                </ul>
+            </li>
+        
+            <li><a href="">Contacto</a></li>
+        </ul>
+        </nav>
+        <button class="hamburguesa" onclick="toggleMenu()"><i class="fa fa-list" aria-hidden="true"></i></button>
+
+        </header>
+        <figure class="sobre">
+            <img src="imagenes/imagenes_parcial1/vinilos.png" alt="">
+            <div class="texto">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una tienda dedicada a <br>
+                vender una gran y variada <br>
+                coleccion de discos lp, desde los <br>
+                mas antiguos hasta los mas <br>
+                actuales
+             </p>
+            </div>
+        </figure>
+        <section class="principal">
+            <h2 class="titulo1" id="latina">Musica Latina</h2>
+                <hr class="regla1">
+        <section class="primera_seccion">
+                <button class="previo" onclick="anterior()"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+            <div class="slider">
+                <div class="disco primero" id="disco1">
+                        <figure>
+                        <img src="imagenes/imagenes_parcial1/romantico.jpg" alt="">
+                        </figure>
+                        <h2>Romantico <br> - Jose Jose</h2>
+                        <h3>600$MXN</h3>
+                        <div class="botones">
+                        <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                        <button class="musica" id="musica1" onclick="playAudio('gloria')"><i class="fa fa-music" aria-hidden="true"></i></button>
+                        <audio id="gloria" src="imagenes/audios_parcial1/gloria_tu.mp3"></audio>
+                        </div>
+                    </div>
+                <div class="disco">
+                    <figure>
+                    <img src="imagenes/imagenes_parcial1/20años.jpg" alt="">
+                    </figure>
+                    <h2>20 Años <br> - Luis Miguel</h2>
+                    <h3>900$MXN</h3>
+                    <div class="botones">
+                    <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    <audio id="sera" src="imagenes/audios_parcial1/sera_que.mp3"></audio>
+                    <button class="musica" id="musica2"  onclick="playAudio('sera')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/juangabriel.jpg" alt="">
+                </figure>
+                <h2>Lo mejor en Bellas <br> Artes - Juan Gabriel</h2>
+                <h3>900$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica3"  onclick="playAudio('eterno')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/amor_eterno.mp3" id="eterno"></audio>
+                </div>
+            </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/romance.jpg" alt="">
+                </figure>
+                <h2>Romance <br> - Luis Miguel</h2>
+                <h3>740$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica4"  onclick="playAudio('mucho_corazon')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/mucho_corazon.mp3" id="mucho_corazon"></audio>
+                </div>
+            </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/si.jpg" alt="">
+                </figure>
+                <h2>Si <br> - Julieta Venegas</h2>
+                <h3>1000$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica5"  onclick="playAudio('lento')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/lento.mp3" id="lento"></audio>
+                </div>
+            </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/reencuentro.jpg" alt="">
+                </figure>
+                <h2>Reencuentro <br> - Jose Jose</h2>
+                <h3>600$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica6"  onclick="playAudio('gavilan')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/gavilan_o_paloma.mp3" id="gavilan"></audio>
+                </div>
+            </div>
+            </div>
+            <button class="siguiente" onclick="siguiente()"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+
+        </section>
+
+        <h2 class="titulo2" id="rock">Rock</h2>
+        <hr class="regla2">
+        <section class="primera_seccion">
+            <button class="previo" onclick="anterior1()"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+        <div class="slider">
+            <div class="disco primero" id="disco2">
+                    <figure>
+                    <img src="imagenes/imagenes_parcial1/back_in_black.jpg" alt="">
+                    </figure>
+                    <h2>Back in Black <br> - AC/DC</h2>
+                    <h3>800$MXN</h3>
+                    <div class="botones">
+                    <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    <button class="musica" id="musica7"  onclick="playAudio('hells_bells')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                    <audio src="imagenes/audios_parcial1/hells_bells.mp3" id="hells_bells"></audio>
+                    </div>
+                </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/use_your_illusion.jpg" alt="">
+                </figure>
+                <h2>Use Your Illusion 1 <br> - Guns N' Roses
+                </h2>
+                <h3>900$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica8"  onclick="playAudio('november')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/november_rain.mp3" id="november"></audio>
+                </div>
+            </div>
+        <div class="disco">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/roundabout.jpg" alt="">
+            </figure>
+            <h2>Roundabout <br> - Yes</h2>
+            <h3>800$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica9"  onclick="playAudio('roundabout')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/roundabout.mp3" id="roundabout"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/appetite.jpg" alt="">
+            </figure>
+            <h2>Appetite for Destruction <br> - Guns N' Roses</h2>
+            <h3>960$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica10"  onclick="playAudio('sweet_child')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/child_o_mine.mp3" id="sweet_child"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/hotel_california.jpg" alt="">
+            </figure>
+            <h2>Hotel California <br> - Eagles</h2>
+            <h3>1000$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica11"  onclick="playAudio('kid_in')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/kid_in_town.mp3" id="kid_in"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/hypnotize.jpg" alt="">
+            </figure>
+            <h2>Hypnotize <br> - System Of A Down</h2>
+            <h3>1250$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica12"  onclick="playAudio('lonely_day')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/lonely_day.mp3" id="lonely_day"></audio>
+            </div>
+        </div>
+        </div>
+        <button class="siguiente" onclick="siguiente1()"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+
+    </section>
+
+    <h2 class="titulo1" id="pop">Pop</h2>
+        <hr class="regla1">
+        <section class="primera_seccion">
+            <button class="previo" onclick="anterior2()"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+        <div class="slider">
+            <div class="disco primero" id="disco3">
+                    <figure>
+                    <img src="imagenes/imagenes_parcial1/after_hours.jpg" alt="After Hours The Weekend">
+                    </figure>
+                    <h2>After Hours <br> - The Weekend</h2>
+                    <h3>1200$MXN</h3>
+                    <div class="botones">
+                    <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    <button class="musica" id="musica13"  onclick="playAudio('save_tears')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                    <audio src="imagenes/audios_parcial1/save_your_tears.mp3" id="save_tears"></audio>
+                    </div>
+                </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/future_nostalgia.jpg" alt="">
+                </figure>
+                <h2>Future Nostalgia <br>- Dua Lipa
+                </h2>
+                <h3>1000$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica14"  onclick="playAudio('levitating')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/levitating.mp3" id="levitating"></audio>
+                </div>
+            </div>
+        <div class="disco">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/goodbye.jpg" alt="">
+            </figure>
+            <h2>Goodbye Yellow Brick Road <br> - Elton John</h2>
+            <h3>800$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica15"  onclick="playAudio('yellow_brick')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/yellow_brick.mp3" id="yellow_brick"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/thriller.jpg" alt="">
+            </figure>
+            <h2>Thriller<br> - Michael Jackson</h2>
+            <h3>910$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica16"  onclick="playAudio('thriller')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/thriller.mp3" id="thriller"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/celebration.jpg" alt="">
+            </figure>
+            <h2>Celebration (Double Disc) <br> - Madonna</h2>
+            <h3>1500$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica17"  onclick="playAudio('prayer')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/like_a_prayer.mp3" id="prayer"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/yellow_submarine.jpg" alt="">
+            </figure>
+            <h2>Yellow Submarine <br> - The Beatles</h2>
+            <h3>1250$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica18"  onclick="playAudio('submarine')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/yellow_submarine.mp3" id="submarine"></audio>
+            </div>
+        </div>
+        </div>
+        <button class="siguiente" onclick="siguiente2()"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+
+    </section>
+
+    <h2 class="titulo2" id="soundtrack">Soundtrack</h2>
+        <hr class="regla2">
+        <section class="primera_seccion">
+            <button class="previo" onclick="anterior3()"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+        <div class="slider">
+            <div class="disco primero" id="disco4">
+                    <figure>
+                    <img src="imagenes/imagenes_parcial1/rocky.jpg" alt="After Hours The Weekend">
+                    </figure>
+                    <h2>The Best of Rocky <br> - Varios Artistas</h2>
+                    <h3>1200$MXN</h3>
+                    <div class="botones">
+                    <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    <button class="musica" id="musica19"  onclick="playAudio('tiger')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                    <audio src="imagenes/audios_parcial1/eye_of_the_tiger.mp3" id="tiger"></audio>
+                    </div>
+                </div>
+            <div class="disco">
+                <figure>
+                <img src="imagenes/imagenes_parcial1/moana.jpg" alt="">
+                </figure>
+                <h2>Moana Soundtrack <br>- Varios Artistas
+                </h2>
+                <h3>1600$MXN</h3>
+                <div class="botones">
+                <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                <button class="musica" id="musica19"  onclick="playAudio('your_welcome')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+                <audio src="imagenes/audios_parcial1/your_welcome.mp3" id="your_welcome"></audio>
+                </div>
+            </div>
+        <div class="disco">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/starwars.jpg" alt="">
+            </figure>
+            <h2>Star Wars Soundtrack <br> - John Williams</h2>
+            <h3>800$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica20"  onclick="playAudio('star_wars')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/star_wars.mp3" id="star_wars"></audio>
+            </div>    
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/deadpool.jpg" alt="">
+            </figure>
+            
+            <h2>Deadpool & Wolverine<br> - Varios Artistas</h2>
+            <h3>1330$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica21"  onclick="playAudio('bye')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/bye_bye_bye.mp3" id="bye"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/barbie.jpg" alt="">
+            </figure>
+            <h2>Barbie Soundtrack <br> - Varios Artistas</h2>
+            <h3>1000$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica22"  onclick="playAudio('barbie')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/barbie.mp3" id="barbie"></audio>
+            </div>
+        </div>
+        <div class="disco primero">
+            <figure>
+            <img src="imagenes/imagenes_parcial1/forrest.jpg" alt="">
+            </figure>
+            <h2>Forrest Gump Soundtrack <br> - Varios Artistas</h2>
+            <h3>800$MXN</h3>
+            <div class="botones">
+            <button class="compra"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="musica" id="musica23"  onclick="playAudio('forrest')"  ><i class="fa fa-music"aria-hidden="true"></i></button>
+            <audio src="imagenes/audios_parcial1/forrest.mp3" id="forrest"></audio>
+            </div>
+        </div>
+        </div>
+        <button class="siguiente" onclick="siguiente3()"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+
+    </section>
+       
+    </section>
+    <footer>
+        <section class="footer1">
+        <h2>
+        vinylstore@gmail.com
+        </h2>
+        <h2>
+        656 123 4562
+        </h2>
+        <section class="redes_sociales">
+            <div id="facebook">
+                <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div id="instagram">
+                <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div id="twitter">
+                <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+        </section>
+        <div class="medio"></div>
+        <section class="footer2">
+            <a href=""><h2>Politicas de Privacidad</h2></a>
+            <a href=""><h2>Copyright</h2></a>
+        </section>
+        
+    </footer>
+    </main>
+</body>
+</html>
